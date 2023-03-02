@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git初学者的实践总结（摘自廖老师） | JJBlog</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="前端、前端教程、小程序、个人博客、张晶晶博客">
+    
+    <link rel="preload" href="/Blog/assets/css/0.styles.d75286d0.css" as="style"><link rel="preload" href="/Blog/assets/js/app.05fbaaaf.js" as="script"><link rel="preload" href="/Blog/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/Blog/assets/js/12.a3bf6056.js" as="script"><link rel="prefetch" href="/Blog/assets/js/10.1c5858b8.js"><link rel="prefetch" href="/Blog/assets/js/11.420206ab.js"><link rel="prefetch" href="/Blog/assets/js/13.5eef12c0.js"><link rel="prefetch" href="/Blog/assets/js/14.7258a101.js"><link rel="prefetch" href="/Blog/assets/js/15.67377551.js"><link rel="prefetch" href="/Blog/assets/js/16.71e5bca4.js"><link rel="prefetch" href="/Blog/assets/js/17.f50924dd.js"><link rel="prefetch" href="/Blog/assets/js/18.a322b80b.js"><link rel="prefetch" href="/Blog/assets/js/19.fe304b8b.js"><link rel="prefetch" href="/Blog/assets/js/20.cabf7c8f.js"><link rel="prefetch" href="/Blog/assets/js/21.65ef7b2a.js"><link rel="prefetch" href="/Blog/assets/js/22.3d5b2a52.js"><link rel="prefetch" href="/Blog/assets/js/23.df34116e.js"><link rel="prefetch" href="/Blog/assets/js/24.553098af.js"><link rel="prefetch" href="/Blog/assets/js/25.3fd7cb0b.js"><link rel="prefetch" href="/Blog/assets/js/26.1d6b4bd9.js"><link rel="prefetch" href="/Blog/assets/js/27.d0638a89.js"><link rel="prefetch" href="/Blog/assets/js/28.9a1d0826.js"><link rel="prefetch" href="/Blog/assets/js/29.956607b5.js"><link rel="prefetch" href="/Blog/assets/js/3.96557567.js"><link rel="prefetch" href="/Blog/assets/js/30.fde4c090.js"><link rel="prefetch" href="/Blog/assets/js/31.54a22f0c.js"><link rel="prefetch" href="/Blog/assets/js/32.2c3a28dc.js"><link rel="prefetch" href="/Blog/assets/js/33.73f4bbc5.js"><link rel="prefetch" href="/Blog/assets/js/34.186ec671.js"><link rel="prefetch" href="/Blog/assets/js/35.078c8411.js"><link rel="prefetch" href="/Blog/assets/js/36.3afaaebf.js"><link rel="prefetch" href="/Blog/assets/js/37.a3f916b3.js"><link rel="prefetch" href="/Blog/assets/js/4.d12742be.js"><link rel="prefetch" href="/Blog/assets/js/5.216cae74.js"><link rel="prefetch" href="/Blog/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/Blog/assets/js/7.69e75d2d.js"><link rel="prefetch" href="/Blog/assets/js/8.d35a637b.js"><link rel="prefetch" href="/Blog/assets/js/9.2fe8d97f.js">
+    <link rel="stylesheet" href="/Blog/assets/css/0.styles.d75286d0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Blog/" class="home-link router-link-active"><!----> <span class="site-name">JJBlog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Blog/Resume/myResume/" class="nav-link">
+  Resume
+</a></div><div class="nav-item"><a href="/Blog/Blog/" class="nav-link router-link-active">
+  Blogs
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Menu" class="dropdown-title"><span class="title">Others</span> <span class="arrow down"></span></button> <button type="button" aria-label="Menu" class="mobile-dropdown-title"><span class="title">Others</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Blog/other/contact/" class="nav-link">
+  与我联系
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Xiaojing-511?tab=repositories" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Blog/Resume/myResume/" class="nav-link">
+  Resume
+</a></div><div class="nav-item"><a href="/Blog/Blog/" class="nav-link router-link-active">
+  Blogs
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Menu" class="dropdown-title"><span class="title">Others</span> <span class="arrow down"></span></button> <button type="button" aria-label="Menu" class="mobile-dropdown-title"><span class="title">Others</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Blog/other/contact/" class="nav-link">
+  与我联系
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Xiaojing-511?tab=repositories" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/Blog/Resume/myResume/" class="sidebar-heading clickable"><span>Resume</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/Blog/Projects/hokdo/" class="sidebar-heading clickable"><span>Projects</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/Blog/Blog/" class="sidebar-heading clickable router-link-active open"><span>Blogs</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/Blog/Blog/Web/blog1/" class="sidebar-heading clickable"><span>Web</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/Blog/Blog/Ant/blog1/" class="sidebar-heading clickable"><span>Ant Design Vue</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/Blog/Blog/Deep-learning/blog1/" class="sidebar-heading clickable"><span>Deep learning</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/Blog/Blog/Others/blog1/" class="sidebar-heading clickable open"><span>Others</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/Blog/Blog/Others/blog1/" class="sidebar-link">如何每次随机出不同的数-Math.random()</a></li><li><a href="/Blog/Blog/Others/blog2/" aria-current="page" class="active sidebar-link">Git初学者的实践总结(摘自廖老师)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Blog/Blog/Others/blog2/#git初学者的实践总结-摘自廖老师" class="sidebar-link">Git初学者的实践总结（摘自廖老师）</a></li></ul></li><li><a href="/Blog/Blog/Others/blog3/" class="sidebar-link">git提交代码(解决冲突)</a></li></ul></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/Blog/Notes/note1/" class="sidebar-heading clickable"><span>Notes</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="git初学者的实践总结-摘自廖老师"><a href="#git初学者的实践总结-摘自廖老师" class="header-anchor">#</a> Git初学者的实践总结（摘自廖老师）</h2> <blockquote><p>2020-04-19 21:39:38
+<br>分类专栏：git github</p></blockquote> <p>本文摘自廖老师的Git教程</p> <p>当你已经安装好Git后，进入Git Bash，会提示要输入用户名和邮箱。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name <span class="token string">&quot;Your Name&quot;</span>
+$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">&quot;xxx@xxx.com&quot;</span>
+</code></pre></div><p>在设置好你的名字和邮箱后，可以通过命令<code>pwd</code>来查看当前的目录。
+<strong>创建版本库</strong>
+用<code>cd</code>来锁定到你要添加版本库的路径</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> /e/Git
+</code></pre></div><p>可以再用<code>pwd</code>来查看路径是否正确，确定好后就可以用命令<code>mkdir</code>添加你的版本库了(当然你可以手动在Git下创建，请尽量使用英文起名来避免产生麻烦)</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">mkdir</span> learngit
+$ <span class="token builtin class-name">cd</span> learngit
+$ <span class="token builtin class-name">pwd</span>
+/e/Git/learngit
+</code></pre></div><p>使用<code>git init</code>命令把这个目录变成Git可以管理的仓库</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">git</span> init
+</code></pre></div><p><strong>把文件添加到版本库</strong>
+Windows用户请不要使用自带的<strong>记事本</strong>编辑任何文本文件（可能会遇到很多问题，因为开发团队的一点点画蛇添足），所以推荐使用免费的Notepad++来编辑文本（注意将默认编码设置为UTF-8 without BOM）。
+注：编写的文件（如：readme.txt）要在learngit目录下才能被Git管理。
+此时编写好的文件处在工作区，要将readme.txt添加到版本库需要两步。
+<img src="https://img-blog.csdnimg.cn/20200419212903110.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ2MzYzNzkw,size_16,color_FFFFFF,t_70#pic_center" alt="暂存区">
+第一步：使用命令<code>git add</code>将文件添加到暂存区（版本库的左部分），此步还未提交到分支，只是暂存</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">git</span> <span class="token function">add</span> readme.txt
+</code></pre></div><p>执行命令后，没有任何显示证明你是对的（没有消息就是最好的消息），此时可以用命令<code>git status</code>来查看当前仓库状态，出现一堆字表示还未将该文件提交到仓库。
+第二步：执行<code>git commit</code>命令将文件提交到分支（版本库的右部分）</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">&quot;你对本次改动的注释&quot;</span>
+</code></pre></div><p>此处若不写-m &quot;注释&quot;，则执行后会跳到Vim,所以为了带来不必要的麻烦，也为了给自己更清晰的改动思路，把注释写上还是好的。
+此时再用命令<code>git status</code>查看仓库的状态，则会显示working tree clean,表示暂存区的所有文件都已经提交了。因为commit可以提交多个文件，所以你可以添加多个文件到暂存区后一起提交。（这就是为什么要分两步提交的一个原因了）</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">git</span> <span class="token function">add</span> readme.txt
+$ <span class="token function">git</span> <span class="token function">add</span> test.txt
+$ <span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">&quot;add 2 files&quot;</span>
+</code></pre></div><p><strong>小结：</strong>
+初始化仓库：<code>git init</code>
+添加文件到仓库：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">git</span> <span class="token function">add</span> readme.txt
+$ <span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">&quot;add a file&quot;</span>
+</code></pre></div><p>到这里你可以去实践一下啦
+<strong>修改及再次提交</strong>
+我们在Notepad++中修改文件（删去一个单词）</p> <div class="language-handlebars extra-class"><pre class="language-handlebars"><code>Git is a version control system.
+Git is free software.
+</code></pre></div><p>修改之后的文件需要再次提交（同样是那两步），我们使用命令<code>git status</code>可以查看当前仓库的状态，它告诉我们readme.txt文件被修改了</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">git</span> status
+On branch master
+Changes not staged <span class="token keyword">for</span> commit:
+  <span class="token punctuation">(</span>use <span class="token string">&quot;git add &lt;file&gt;...&quot;</span> to update what will be committed<span class="token punctuation">)</span>
+  <span class="token punctuation">(</span>use <span class="token string">&quot;git checkout -- &lt;file&gt;...&quot;</span> to discard changes <span class="token keyword">in</span> working directory<span class="token punctuation">)</span>
+
+	modified:   readme.txt
+
+no changes added to commit <span class="token punctuation">(</span>use <span class="token string">&quot;git add&quot;</span> and/or <span class="token string">&quot;git commit -a&quot;</span><span class="token punctuation">)</span>
+</code></pre></div><p>在提交之前我们可以使用命令<code>git diff</code>来查看具体修改的位置及内容</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">git</span> <span class="token function">diff</span> readme.txt 
+<span class="token function">diff</span> <span class="token parameter variable">--git</span> a/readme.txt b/readme.txt
+index 46d49bf<span class="token punctuation">..</span>9247db6 <span class="token number">100644</span>
+--- a/readme.txt
++++ b/readme.txt
+@@ -1,2 +1,2 @@
+<span class="token parameter variable">-Git</span> is a version control system.
++Git is a distributed version control system.
+ Git is <span class="token function">free</span> software. 
+</code></pre></div><p>这里我们可以看到将原来的句子Git is a version control system.添加了一个词distributed，后面的一个句子没有改变。
+再我们确定了修改的内容之后就可以提交了，这里不再重复，如果你有些忘记了，请翻回上边把文件添加到版本库哦~
+<strong>版本回退</strong>
+手滑误删是最常见的事了，不过在Git中总是可以补救的
+使用命令<code>git log</code>查看提交历史，即查看都有哪些版本</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">git</span> log
+commit 1094adb7b9b3807259d8cb349e7df1d4d6477073 <span class="token punctuation">(</span>HEAD -<span class="token operator">&gt;</span> master<span class="token punctuation">)</span>
+Author: Michael Liao <span class="token operator">&lt;</span>askxuefeng@gmail.com<span class="token operator">&gt;</span>
+Date:   Fri May <span class="token number">18</span> <span class="token number">21</span>:06:15 <span class="token number">2018</span> +0800
+
+    append GPL
+
+commit e475afc93c209a690c39c13a46716e8fa000c366
+Author: Michael Liao <span class="token operator">&lt;</span>askxuefeng@gmail.com<span class="token operator">&gt;</span>
+Date:   Fri May <span class="token number">18</span> <span class="token number">21</span>:03:36 <span class="token number">2018</span> +0800
+
+    <span class="token function">add</span> distributed
+
+commit eaadf4e385e865d25c48e7ca9c8395c3f7dfaef0
+Author: Michael Liao <span class="token operator">&lt;</span>askxuefeng@gmail.com<span class="token operator">&gt;</span>
+Date:   Fri May <span class="token number">18</span> <span class="token number">20</span>:59:18 <span class="token number">2018</span> +0800
+
+    wrote a readme <span class="token function">file</span>
+</code></pre></div><p>在commit后面的一串数字是版本号，我们可以通过版本号来实现回退版本，若你觉得显示的太繁琐可以在命令后加参数即<code>git log --pretty=oneline</code>来显示出一行（版本号及你的注释）</p> <div class="language-handlebars extra-class"><pre class="language-handlebars"><code>$ git log --pretty=oneline
+1094adb7b9b3807259d8cb349e7df1d4d6477073 (HEAD -&gt; master) append GPL
+e475afc93c209a690c39c13a46716e8fa000c366 add distributed
+eaadf4e385e865d25c48e7ca9c8395c3f7dfaef0 wrote a readme file
+</code></pre></div><p>下面我们使用命令<code>git reset</code>回退版本（后面还有它的另一个功能）</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">git</span> reset <span class="token parameter variable">--hard</span> HEAD^
+HEAD is now at e475afc <span class="token function">add</span> distributed
+</code></pre></div><p>这里的参数<code>--hard</code>会在以后讲到，请先用着嘿嘿，<code>HEAD</code>表示当前版本，类似指针指向当前版本，则<code>HEAD^</code>是上一个版本，类似<code>HEAD^^</code>则是上上个版本，若十多个则可以使用<code>HEAD~10</code>则是往上10个版本。
+这里我们可以使用命令<code>cat</code>来查看文件内容，看看是否回退了版本。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">cat</span> readme.txt
+Git is a distributed version control system.
+Git is <span class="token function">free</span> software.
+</code></pre></div><p>这时我们还可以找回之前回退被顶掉的版本，用版本号来指定回到版本,只需版本号的前几位即可。翻回之前查看的版本号</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">git</span> reset <span class="token parameter variable">--hard</span> 1094a
+HEAD is now at 83b0afe append GPL
+</code></pre></div><p>此时的版本号已经改变
+可见我们可以通过查看版本号来实现回到指定的版本，但如果我们找不到被顶掉的版本号怎么办？通过指令<code>git reflog</code>来查看你的每一步命令</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">git</span> reflog
+e475afc HEAD@<span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">}</span>: reset: moving to HEAD^
+1094adb <span class="token punctuation">(</span>HEAD -<span class="token operator">&gt;</span> master<span class="token punctuation">)</span> HEAD@<span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">}</span>: commit: append GPL
+e475afc HEAD@<span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">}</span>: commit: <span class="token function">add</span> distributed
+eaadf4e HEAD@<span class="token punctuation">{</span><span class="token number">4</span><span class="token punctuation">}</span>: commit <span class="token punctuation">(</span>initial<span class="token punctuation">)</span>: wrote a readme <span class="token function">file</span>
+</code></pre></div><p>这时通过查看命令我们可以看到最新commit的是1094a,我们就可以通过版本号来实现了。
+<strong>小结</strong>
+查看提交历史：<code>git log</code>，便于回退版本
+查看命令历史：<code>git reflog</code>，便于找回版本
+<strong>撤销修改</strong>
+这里有两种情况
+一种情况是在本地修改也就是在工作区，还没有用<code>git add readme.txt</code>来将文件添加到暂存区时，这时使用命令<code>git checkout -- readme.txt</code>来撤销会返回到和版本库（暂存区和提交区）一样的状态，也就是把在工作区的修改撤销了。</p> <p>另一种情况是在已经添加到暂存区，此时使用命令<code>git reset HEAD readme.txt</code>修改，撤销会将暂存区的修改撤销掉然后重新放回到工作区。<code>git reset</code>命令不仅可以回退版本，也可以将暂存区的修改回退到工作区。这时用<code>HEAD</code>表示最新版本。</p> <p>总之就是返回到最近的一次<code>git add</code>或<code>git commit</code>时的状态（需要理解一下）
+<strong>小结</strong>
+撤销工作区的修改：<code>git checkout -- &lt;filename&gt;</code>
+撤销暂存区的修改：<code>git reset HEAD &lt;filename&gt;</code>
+若已提交，请参考回退版本。</p> <p>若你还是觉得不懂的话请移步廖老师的Git教程，讲的真的很好！
+(https://www.liaoxuefeng.com/wiki/896043488029600/896067008724000)</p> <p>还会陆续通过自身实践补充，若有错误的地方请及时与我沟通或下方评论。本人是小白一个，希望会得到鼓励嘻嘻。</p> <p>下篇我会总结如何将本地仓库关联到Github上的远程仓库、远程库克隆到本地及分支的管理等。后续还会出详细的Github Desktop的使用来代替较复杂的Git（但是若是你基本熟悉了Git的命令会更加快速的接受Github Desktop）。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Blog/Blog/Others/blog1/" class="prev">
+        如何每次随机出不同的数-Math.random()
+      </a></span> <span class="next"><a href="/Blog/Blog/Others/blog3/">
+        git提交代码(解决冲突)
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/Blog/assets/js/app.05fbaaaf.js" defer></script><script src="/Blog/assets/js/2.733019b2.js" defer></script><script src="/Blog/assets/js/12.a3bf6056.js" defer></script>
+  </body>
+</html>

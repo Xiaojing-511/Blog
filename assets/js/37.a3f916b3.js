@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[37],{309:function(t,n,s){"use strict";s.r(n);var o=s(14),e=Object(o.a)({},(function(){var t=this._self._c;return t("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[t("p",[this._v("我的邮箱： 2444565820@qq.com"),t("br"),this._v("\n我的号码：13946812445")])])}),[],!1,null,null,null);n.default=e.exports}}]);
